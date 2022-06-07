@@ -19,6 +19,7 @@ const forecast = function (lati, longi, callback) {
 				temp: body.current.temperature,
 				temp_feelslike: body.current.feelslike,
 				weather_desc: body.current.weather_descriptions[0],
+				humid: body.current.humidity,
 			})
 		}
 	})

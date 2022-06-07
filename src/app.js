@@ -52,7 +52,7 @@ app.get("/weather", function (req, res) {
 			forecast(
 				lat,
 				long,
-				(error, { temp, temp_feelslike, weather_desc }) => {
+				(error, { temp, temp_feelslike, weather_desc, humid }) => {
 					if (error) {
 						return res.send({
 							error: error,
@@ -70,7 +70,9 @@ app.get("/weather", function (req, res) {
 							" and it feels like " +
 							temp_feelslike +
 							" status is " +
-							weather_desc,
+							weather_desc +
+							" and humidity is " +
+							humid,
 						// temperature: temp,
 						// feels_like: temp_feelslike,
 						// Description: weather_desc,
