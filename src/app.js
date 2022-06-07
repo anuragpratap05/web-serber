@@ -3,6 +3,7 @@ const express = require("express")
 const hbs = require("hbs")
 
 const app = express()
+const port = process.env.PORT || 3000
 
 const public_path = path.join(__dirname, "../public")
 const view_path = path.join(__dirname, "../templates/views")
@@ -97,6 +98,6 @@ app.get("*", function (req, res) {
 	})
 })
 
-app.listen(3000, function () {
+app.listen(port, function () {
 	console.log("listening")
 })
